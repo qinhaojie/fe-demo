@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="//cdn.bootcss.com/meyer-reset/2.0/reset.css" rel="stylesheet">
+    <style>
+        body{
+            background: #ccc;
+        }
+        @-webkit-keyframes   loding {
+            0%  {
+                transform:rotate(0deg);
+            }
+
+            100%
+            {
+                transform:rotate(360deg);
+            }
+        }
+
+        .loding{
+            border: 5px solid black;
+            width: 150px;
+            height: 150px;
+            margin: 100px auto;
+            border-left-color:#fff;
+            border-radius: 50%;
+
+            -webkit-animation: loding 1.5s  linear infinite;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="loding"></div>
+
+</body>
+</html>
