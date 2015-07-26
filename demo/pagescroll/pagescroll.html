@@ -15,6 +15,7 @@ body,html{
 #container{
 	width: 100%;
 	height: 100%;
+    position: relative;
 }
 .item{
 	width:100%;
@@ -50,15 +51,12 @@ body,html{
         }
         var i = 0;
         $(window).on('mousewheel',function(e){
-            /*if(wheelDirection(e)){
-                next();
-            }else{
-
-            }*/
-            console.log($('.item').eq(i))
-            var postion = $('.item').eq(i++).position();
-
-            var transform = 'translateY(-'+ postion.top +'px)'
+           
+            i++;
+            var postion = $('.item').eq(i).position();
+        
+            var transform = 'translateY(-'+ postion.top +'px)';
+            console.log(postion);
             $('#container').css({
                 'transform':transform,
                 'transition':'0.3s'
