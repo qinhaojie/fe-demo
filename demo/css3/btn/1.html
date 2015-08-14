@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://cdn.bootcss.com/normalize/3.0.3/normalize.css" rel="stylesheet">
+    <style>
+
+        .content{
+            display: flex;
+            margin-top: 5%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn{
+           
+            min-width: 100px;
+            margin: 30px 50px;
+            flex-basis: 200px;
+            height: 50px;
+            background: red;
+            position: relative;
+        }
+        .btn1:after{
+            content: '';
+            position: absolute;
+            -webkit-transform: rotate(35deg);
+            top: -50px;
+            width: 30px;
+            height: 180px;
+            background: #fff;
+            opacity: 0.3;
+            left:-50px;
+            transition: 1.2s;
+        }
+        .btn1:hover:after{
+            left:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="btn btn1"></div>
+    <div class="btn btn1"></div> <div class="btn btn1"></div> <div class="btn btn1"></div>
+</div>
+
+</body>
+</html>
