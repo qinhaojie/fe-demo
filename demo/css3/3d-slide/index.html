@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
-        ul{
+
+        ul {
             list-style: none;
         }
-        .container{
+
+        .container {
             width: 990px;
             margin: 0 auto;
-
+            text-align: center;
         }
-        .container ul{
-            width: 50%;
+
+        .container ul {
+            width: 80%;
             height: 500px;
+            display: inline-block;
             transform-style: preserve-3d;
             perspective: 800px;
             position: relative;
         }
-        .container ul li{
+
+        .container ul li {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -31,16 +36,53 @@
             left: 0;
 
         }
-        .container ul li:nth-of-type(3){
-            background: #555511;
-            transform: translateX(-200px);
-        }
-        .container ul li:nth-of-type(1){
+
+        .container ul li:nth-of-type(1) {
             background: #551221;
-            transform: translateX(-200px) translateZ(-80px) rotateY(20deg);
+
         }
-        .container ul li:nth-of-type(2){
+
+        .container ul li:nth-of-type(2) {
             background: #112233;
+        }
+
+        .container ul li:nth-of-type(3) {
+            background: #555511;
+
+        }
+
+        .left-hide {
+            -webkit-animation: 1.5s infinite leftHide;
+        }
+
+        .right-show {
+            -webkit-animation: 1.5s infinite rightShow;
+        }
+
+        @-webkit-keyframes leftHide {
+
+            0% {
+                transform: translateZ(0);
+            }
+            40% {
+                transform: translateX(-40%) translateZ(-80px) rotateY(20deg) scale(0.8);
+            }
+            100% {
+                transform: translateZ(-200px);
+            }
+        }
+
+        @-webkit-keyframes rightShow {
+
+            0% {
+                transform: translateZ(-200px);
+            }
+            40% {
+                transform: translateX(40%) translateZ(-80px) rotateY(-20deg) scale(0.8);
+            }
+            100% {
+                transform: translateZ(0px);
+            }
         }
     </style>
 </head>
@@ -48,7 +90,8 @@
 
 <div class="container">
     <ul>
-        <li></li>
+        <li class="left-hide"></li>
+        <li class="right-show"></li>
     </ul>
 
 </div>
