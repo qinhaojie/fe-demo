@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mul-borders{
+            width: 300px;
+            background: rgb(42, 201, 179);
+            height: 260px;
+            box-shadow: 0 0 0 10px rgb(238, 61, 131) inset,
+                        0 0 0 15px rgb(57, 26, 182) inset,
+                        0 0 0 25px rgb(225, 231, 107) inset;
+            padding: 25px;
+        }
+        .mul-borders2{
+            width: 300px;
+            background: rgb(42, 201, 179);
+            height: 260px;
+            box-shadow: 0 0 0 10px rgb(238, 61, 131),
+                        0 0 0 15px rgb(57, 26, 182),
+                        0 0 0 25px rgb(225, 231, 107);
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mul-borders">
+        box-shadow inset方式 用padding补足
+    </div>
+    <div class="mul-borders2">
+        用margin补足
+    </div>
+    <script>
+        document.querySelector('.mul-borders').onclick = function(){
+            alert(123)
+        }
+        document.querySelector('.mul-borders2').onclick = function(){
+            alert(321)
+        }
+    </script>
+</body>
+</html>
