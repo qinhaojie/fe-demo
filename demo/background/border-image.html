@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style media="screen">
+        *{padding: 0;margin: 0}
+        .border1{
+            padding: 1em;
+            width: 300px;
+            height: 100px;
+            border: 2em solid transparent;
+            background-image: linear-gradient(white,white),url('1.jpg');
+            background-size: cover;
+            background-clip: padding-box,border-box;
+            background-origin: border-box;
+        }
+        .borer2{
+            width: 300px;
+            height: 100px;
+            padding: 3em;
+            border: 1em solid transparent;
+            background: linear-gradient(white,white),
+                             repeating-linear-gradient(-45deg,
+                                 red 0 , red 1em, transparent 0 ,transparent 2em, #58a 0 , #58a 3em, transparent 0,transparent 4em);
+
+            background-clip: padding-box,border-box;
+            background-origin: border-box;
+        }
+
+    </style>
+</head>
+<body>
+<div class="border1"></div>
+<div class="borer2"></div>
+</body>
+</html>
