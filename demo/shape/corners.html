@@ -7,20 +7,40 @@
         div{
             display: inline-block;
             padding: 2em;
-            /*background: #1eb2e2;*/
+            background: #1eb2e2;
             line-height: 1;
             padding-right: 3em;
         }
-        body{background: rgb(142, 103, 199)}
+        /*body{background: rgb(142, 103, 199)}*/
         .c1{
             background: linear-gradient(-45deg,transparent 1.765em,#1eb2e2 0) bottom right / 50% 50%,
             linear-gradient(225deg,transparent 1.765em,#1eb2e2 0) top right / 50% 50%,
             linear-gradient(90deg,#1eb2e2 ,#1eb2e2 ) top left / 50% 100%;
             background-repeat: no-repeat;
         }
+        .c2{
+            position: relative;
+            width: 100px;
+            background: linear-gradient(-135deg,transparent 2.1em,#1eb2e2 0);
+        }
+        .c2::after{
+            content: '';
+            background: linear-gradient(-135deg,transparent 50%, rgba(207, 70, 70, 0.6) 0) ;
+            display: block;
+            box-sizing: border-box;
+            /*box-shadow: 1px -1px white inset;*/
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 3em;
+            height: 3em;
+        }
     </style>
 </head>
 <body>
-    <div class="c1">adfafd</div>
+    <div class="c1"></div>
+    <div class="c2">
+
+    </div>
 </body>
 </html>
