@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+        div{
+            background: rgb(51, 139, 242);
+            color: #fff;
+            transform: skewX(-45deg);
+            padding: 2em;
+            width: 10em;
+            display: inline-block;
+            margin: 0;
+        }
+        span{
+            margin: 0;
+            transform: skewX(45deg);
+            display: inline-block;
+        }
+
+        p{
+            position: relative;
+            display: inline-block;
+            padding: 3em;
+        }
+        p::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: repeating-linear-gradient(45deg,
+                rgb(12, 174, 247) 0 , rgb(12, 174, 247) 10px, white 0 , white 15px
+                );
+            transform: skewX(-45deg);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+
+            lalalala
+        </span>
+    </div>
+    <div>
+        <span>
+
+            lalalala
+        </span>
+    </div>
+
+    <p>
+        adsfadf
+    </p>    <p>
+            adsfadf
+        </p>    <p>
+                adsfadf
+            </p>
+</body>
+</html>
